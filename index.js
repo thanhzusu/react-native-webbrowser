@@ -9,7 +9,6 @@ var {
 
 import BaseComponent from './BaseComponent'
 import Utils from './Utils'
-import Spinner from 'react-native-loading-spinner-overlay';
 
 import styles from './styles'
 
@@ -29,7 +28,8 @@ const propTypes = {
     foregroundColor: PropTypes.string,
     backgroundColor: PropTypes.string,
     onNavigationStateChange: PropTypes.func,
-    onShouldStartLoadWithRequest: PropTypes.func
+    onShouldStartLoadWithRequest: PropTypes.func,
+    renderLoading: PropTypes.func,
 }
 
 const defaultProps = {
@@ -141,7 +141,7 @@ class Webbrowser extends BaseComponent {
                     scalesPageToFit={this.state.scalesPageToFit}
                 />
                 {this.renderToolbar()}
-                <Spinner visible={this.state.loading} />
+                {typeof this.props.renderLoading === 'function' && this.props.renderLoading(this.state.loading)}
             </View>
         );
     }

@@ -28,8 +28,5 @@
   "bugs": {
     "url": "https://github.com/d-a-n/react-native-webbrowser/issues"
   },
-  "homepage": "https://github.com/d-a-n/react-native-webbrowser#readme",
-  "dependencies": {
-    "react-native-loading-spinner-overlay": "0.5.1"
-  }
+  "homepage": "https://github.com/d-a-n/react-native-webbrowser#readme"
 }
