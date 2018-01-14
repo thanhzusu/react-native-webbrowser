@@ -31,5 +31,13 @@
   "homepage": "https://github.com/d-a-n/react-native-webbrowser#readme",
   "dependencies": {
     "prop-types": "^15.6.0"
+  },
+  "devDependencies": {
+    "react": "16.2.0",
+    "react-native": "0.51.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   }
 }
