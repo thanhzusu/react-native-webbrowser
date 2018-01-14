@@ -5,6 +5,7 @@ import {
     View,
     WebView,
 } from 'react-native';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 import BaseComponent from './BaseComponent'
 import Utils from './Utils'
@@ -140,7 +141,7 @@ class Webbrowser extends BaseComponent {
                     scalesPageToFit={this.state.scalesPageToFit}
                 />
                 {this.renderToolbar()}
-                {typeof this.props.renderLoading === 'function' && this.props.renderLoading(this.state.loading)}
+                {typeof this.props.renderLoading === 'function' ? this.props.renderLoading(this.state.loading) : <Spinner visible={this.state.loading} />}
             </View>
         );
     }
