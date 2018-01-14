@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/d-a-n/react-native-webbrowser/issues"
   },
-  "homepage": "https://github.com/d-a-n/react-native-webbrowser#readme"
+  "homepage": "https://github.com/d-a-n/react-native-webbrowser#readme",
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  }
 }

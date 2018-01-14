@@ -1,24 +1,23 @@
 'use strict';
 
-var React = require('react-native');
-var {
+import { Component } from 'react';
+import PropTypes from 'prop-types';
+import {
     View,
     TouchableOpacity,
     StyleSheet,
-    PropTypes,
     ActivityIndicatorIOS,
     ProgressBarAndroid,
     TouchableNativeFeedback,
     Platform,
-    Component
-    } = React;
+} from 'react-native';
 
 const IS_ANDROID = Platform.OS === 'android';
 
 class Button extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {}
     }
 
@@ -27,7 +26,7 @@ class Button extends Component {
         if (this.props.loading) {
             return (
                 <ProgressBarAndroid
-                    style={[{height: 20}, styles.spinner]}
+                    style={[{ height: 20 }, styles.spinner]}
                     styleAttr='Inverse'
                     color={this.props.activityIndicatorColor || 'black'}
                 />

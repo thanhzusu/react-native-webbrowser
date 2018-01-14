@@ -1,11 +1,10 @@
 'use strict';
 
-import React from 'react-native';
-var {
+import PropTypes from 'prop-types';
+import {
     View,
     WebView,
-    PropTypes
-    } = React;
+} from 'react-native';
 
 import BaseComponent from './BaseComponent'
 import Utils from './Utils'
@@ -39,8 +38,8 @@ const defaultProps = {
     hideStatusBar: false,
     hideHomeButton: false,
     hideActivityIndicator: false,
-    onNavigationStateChange: ()=>{},
-    onShouldStartLoadWithRequest: ()=>true,
+    onNavigationStateChange: () => { },
+    onShouldStartLoadWithRequest: () => true,
 }
 
 class Webbrowser extends BaseComponent {
@@ -85,7 +84,7 @@ class Webbrowser extends BaseComponent {
 
         return <AddressBar
             onReload={this.reload}
-            onLoad={(url)=>{this.load(url)}}
+            onLoad={(url) => { this.load(url) }}
             url={this.state.currentUrl}
             foregroundColor={this.props.foregroundColor}
         />
@@ -122,7 +121,7 @@ class Webbrowser extends BaseComponent {
 
     render() {
         return (
-            <View style={[styles.container, this.props.backgroundColor && {backgroundColor: this.props.backgroundColor}]}>
+            <View style={[styles.container, this.props.backgroundColor && { backgroundColor: this.props.backgroundColor }]}>
                 <View style={styles.header}>
                     {this.renderAddressBar()}
                     {this.renderStatusBar()}
@@ -131,7 +130,7 @@ class Webbrowser extends BaseComponent {
                     ref={WEBVIEW_REF}
                     automaticallyAdjustContentInsets={false}
                     style={styles.webView}
-                    source={{uri: this.state.url}}
+                    source={{ uri: this.state.url }}
                     javaScriptEnabled={true}
                     domStorageEnabled={true}
                     decelerationRate="normal"

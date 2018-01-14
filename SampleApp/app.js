@@ -1,16 +1,15 @@
 'use strict';
 
-import React, {
-    Component,
-    View
+import { Component } from 'react';
+import {
+    View,
 } from 'react-native';
-
-import Webbrowser from 'react-native-webbrowser'
+import Webbrowser from 'react-native-webbrowser';
 
 class SampleApp extends Component {
     render() {
         return (
-            <View style={{paddingTop:20, flex:1}}>
+            <View style={{ paddingTop: 20, flex: 1 }}>
                 <Webbrowser
                     url="https://facebook.github.io/react-native/docs/"
                     hideHomeButton={false}

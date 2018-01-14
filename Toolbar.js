@@ -1,11 +1,10 @@
 'use strict';
 
-import React from 'react-native';
-var {
+import PropTypes from 'prop-types';
+import {
     View,
     Image
-    } = React;
-
+} from 'react-native';
 import BaseComponent from './BaseComponent'
 import Button from './Button'
 import styles from './styles'
@@ -37,7 +36,7 @@ class Toolbar extends BaseComponent {
     renderHomeButton() {
 
         if (this.props.hideHomeButton) {
-            return <View/>
+            return <View />
         }
 
         return (
@@ -53,7 +52,7 @@ class Toolbar extends BaseComponent {
     }
 
     buttonStyle() {
-        return [styles.toolBarIcons, this.props.foregroundColor && {tintColor:this.props.foregroundColor}];
+        return [styles.toolBarIcons, this.props.foregroundColor && { tintColor: this.props.foregroundColor }];
     }
 
     render() {
@@ -85,14 +84,14 @@ class Toolbar extends BaseComponent {
 }
 
 Toolbar.propTypes = {
-    backButtonEnabled: React.PropTypes.bool,
-    forwardButtonEnabled: React.PropTypes.bool,
-    homeButtonEnabled: React.PropTypes.bool,
-    hideHomeButton: React.PropTypes.bool,
-    onBack: React.PropTypes.func,
-    onHome: React.PropTypes.func,
-    onForward: React.PropTypes.func,
-    foregroundColor: React.PropTypes.string
+    backButtonEnabled: PropTypes.bool,
+    forwardButtonEnabled: PropTypes.bool,
+    homeButtonEnabled: PropTypes.bool,
+    hideHomeButton: PropTypes.bool,
+    onBack: PropTypes.func,
+    onHome: PropTypes.func,
+    onForward: PropTypes.func,
+    foregroundColor: PropTypes.string
 };
 
 Toolbar.defaultProps = {
@@ -100,9 +99,9 @@ Toolbar.defaultProps = {
     forwardButtonEnabled: false,
     homeButtonEnabled: true,
     hideHomeButton: false,
-    onBack: ()=> {},
-    onHome: ()=> {},
-    onForward: ()=> {}
+    onBack: () => { },
+    onHome: () => { },
+    onForward: () => { }
 };
 
 module.exports = Toolbar;
