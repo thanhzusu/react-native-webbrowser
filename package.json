@@ -1,16 +1,45 @@
 {
-  "name": "react-native-webbrowser",
-  "version": "0.0.6",
-  "description": "A cross-platform (iOS / Android), full-featured in-app web browser component for React Native that is highly customizable",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postversion": "git push && git push --tags"
-  },
-  "repository": {
+  "_from": "git+https://github.com/thanhzusu/react-native-webbrowser.git",
+  "_id": "react-native-webbrowser@0.0.6",
+  "_inBundle": false,
+  "_location": "/react-native-webbrowser",
+  "_phantomChildren": {},
+  "_requested": {
     "type": "git",
-    "url": "git+https://github.com/d-a-n/react-native-webbrowser.git"
+    "raw": "react-native-webbrowser@git+https://github.com/thanhzusu/react-native-webbrowser.git",
+    "name": "react-native-webbrowser",
+    "escapedName": "react-native-webbrowser",
+    "rawSpec": "git+https://github.com/thanhzusu/react-native-webbrowser.git",
+    "saveSpec": "git+https://github.com/thanhzusu/react-native-webbrowser.git",
+    "fetchSpec": "https://github.com/thanhzusu/react-native-webbrowser.git",
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/thanhzusu/react-native-webbrowser.git#f642eb29321a8f159d2edbc2cd755add46f85208",
+  "_spec": "react-native-webbrowser@git+https://github.com/thanhzusu/react-native-webbrowser.git",
+  "_where": "/Volumes/DATA/Projects/3km/react-native/threekm",
+  "author": {
+    "name": "Daniel Korger",
+    "email": "dan@imake.io",
+    "url": "https://imake.io"
+  },
+  "bugs": {
+    "url": "https://github.com/d-a-n/react-native-webbrowser/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react-native-loading-spinner-overlay": "0.5.2"
+  },
+  "deprecated": false,
+  "description": "A cross-platform (iOS / Android), full-featured in-app web browser component for React Native that is highly customizable",
+  "devDependencies": {
+    "react": "16.2.0",
+    "react-native": "0.51.0"
+  },
+  "homepage": "https://github.com/d-a-n/react-native-webbrowser#readme",
   "keywords": [
     "webview",
     "webbrowser",
@@ -23,22 +52,20 @@
     "react-native",
     "react-component"
   ],
-  "author": "Daniel Korger <dan@imake.io> (https://imake.io)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/d-a-n/react-native-webbrowser/issues"
-  },
-  "homepage": "https://github.com/d-a-n/react-native-webbrowser#readme",
-  "dependencies": {
-    "prop-types": "^15.6.0",
-    "react-native-loading-spinner-overlay": "0.5.2"
-  },
-  "devDependencies": {
-    "react": "16.2.0",
-    "react-native": "0.51.0"
-  },
+  "main": "index.js",
+  "name": "react-native-webbrowser",
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-a-n/react-native-webbrowser.git"
+  },
+  "scripts": {
+    "postversion": "git push && git push --tags",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.6"
 }

@@ -1,14 +1,14 @@
 'use strict';
 
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
     TextInput,
     View,
 } from 'react-native';
-import BaseComponent from './BaseComponent'
 import styles from './styles'
 
-class StatusBar extends BaseComponent {
+class StatusBar extends Component {
 
     constructor(props) {
         super(props);

@@ -1,5 +1,6 @@
 'use strict';
 
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
     View,
@@ -7,7 +8,6 @@ import {
 } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
 
-import BaseComponent from './BaseComponent'
 import Utils from './Utils'
 
 import styles from './styles'
@@ -43,7 +43,7 @@ const defaultProps = {
     onShouldStartLoadWithRequest: () => true,
 }
 
-class Webbrowser extends BaseComponent {
+class Webbrowser extends Component {
 
     constructor(props) {
         super(props);
@@ -69,6 +69,10 @@ class Webbrowser extends BaseComponent {
             'onShouldStartLoadWithRequest',
             'renderToolbar'
         );
+    }
+
+    _bind(...methods) {
+        methods.forEach((method) => this[method] = this[method].bind(this));
     }
 
     componentWillReceiveProps(nextProps) {

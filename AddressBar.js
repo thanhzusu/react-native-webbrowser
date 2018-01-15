@@ -1,17 +1,16 @@
 'use strict';
-
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
     TextInput,
     View,
 } from 'react-native';
-import BaseComponent from './BaseComponent'
 import Utils from './Utils'
 import styles from './styles'
 
 const TEXT_INPUT_REF = 'urlInput';
 
-class AddressBar extends BaseComponent {
+class AddressBar extends Component {
 
     constructor(props) {
         super(props);
@@ -26,6 +25,10 @@ class AddressBar extends BaseComponent {
             'handleTextInputChange',
             'onSubmitEditing'
         );
+    }
+
+    _bind(...methods) {
+        methods.forEach((method) => this[method] = this[method].bind(this));
     }
 
     componentWillReceiveProps(nextProps) {

@@ -1,15 +1,14 @@
 'use strict';
-
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
     View,
     Image
 } from 'react-native';
-import BaseComponent from './BaseComponent'
 import Button from './Button'
 import styles from './styles'
 
-class Toolbar extends BaseComponent {
+class Toolbar extends Component {
 
     constructor(props) {
         super(props);
