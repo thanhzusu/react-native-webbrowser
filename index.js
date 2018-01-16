@@ -145,7 +145,7 @@ class Webbrowser extends Component {
                     scalesPageToFit={this.state.scalesPageToFit}
                 />
                 {this.renderToolbar()}
-                {typeof this.props.renderLoading === 'function' ? this.props.renderLoading(this.state.loading) : <Spinner visible={this.state.loading} />}
+                {this.state.loading && (typeof this.props.renderLoading === 'function' ? this.props.renderLoading(this.state.loading) : <Spinner visible={this.state.loading} />)}
             </View>
         );
     }
